@@ -166,8 +166,8 @@
         koji = "meteor";
         gitui = "lazygit";
 
-        test-build = "sudo nixos-rebuild test --flake .#aesthetic";
-        switch-build = "sudo nixos-rebuild switch --flake .#aesthetic";
+        test-build = "sudo nixos-rebuild test --flake .#helios";
+        switch-build = "sudo nixos-rebuild switch --flake .#helios";
 
         # git
         g = "git";

@@ -15,7 +15,6 @@
       "amd_pstate=active" # Enable AMD P-state CPU scaling driver
       "amd_iommu=force" # Force AMD IOMMU for better DMA protection
       "mitigations=off" # Disable CPU security mitigations (improves performance, reduces security)
-      "ideapad_laptop" # Allow Lenovo IdeaPad v4 Dynamic Thermal Control
       "nvme_core.default_ps_max_latency_us=0" # Set NVMe power state latency to minimum (max performance)
 
       "randomize_kstack_offset=on" # Randomize kernel stack offset on each syscall (mitigates some exploits)
@@ -120,12 +119,10 @@
 
     extraModprobeConfig = ''
       options v4l2loopback exclusive_caps=1 card_label="OBS Virtual Output"
-      options rtw88_core disable_lps_deep=y
-      options rtw88_pci disable_aspm=y
     '';
   };
 
-  networking.hostName = "aesthetic";
+  networking.hostName = "helios";
 
   security.tpm2.enable = true;
 

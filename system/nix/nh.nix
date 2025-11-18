@@ -1,6 +1,6 @@
 _: {
   # nh default flake
-  environment.variables.NH_FLAKE = "/home/linuxmobile/Dev/nixland";
+  environment.variables.NH_FLAKE = "/home/emmetdelaney/code/personal/niri-nix";
 
   programs.nh = {
     enable = true;

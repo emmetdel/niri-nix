@@ -108,10 +108,10 @@ git clone --depth 1 https://github.com/linuxmobile/kaku /mnt/etc/nixos
 ### ⚠ <sup><sub><samp>DON'T FORGET IT</samp></sub></sup>
 
 ```bash
-sudo nixos-generate-config --dir /mnt/etc/nixos/hosts/aesthetic
+sudo nixos-generate-config --dir /mnt/etc/nixos/hosts/helios
 
 # Remove configuration.nix
-rm -rf /mnt/etc/nixos/hosts/aesthetic/configuration.nix
+rm -rf /mnt/etc/nixos/hosts/helios/configuration.nix
 ```
 
 - Install Dotfiles Using Flake
@@ -121,7 +121,7 @@ rm -rf /mnt/etc/nixos/hosts/aesthetic/configuration.nix
 cd mnt/etc/nixos
 
 # Install
-nixos-install --flake .#aesthetic
+nixos-install --flake .#helios
 ```
 
 - Reboot
@@ -137,7 +137,7 @@ passwd YourUser
 - Install w/ Home-Manager the config
 
 ```bash
-home-manager switch --flake 'github:linuxmobile/kaku#linudev@aesthetic'
+home-manager switch --flake '.#emmetdelaney@helios'
 ```
 
 ### 🌸 <samp>SCREENSHOTS</samp>
@@ -157,13 +157,13 @@ If you're using this NixOS configuration flake locally, you can simplify the pro
 To switch your system configuration with `nh`, use:
 
 ```bash
-nh os switch .#aesthetic
+nh os switch .#helios
 ```
 
 Similarly, to apply home-manager configurations:
 
 ```bash
-nh home switch .#linudev@aesthetic
+nh home switch .#emmetdelaney@helios
 ```
 
 This avoids needing to type out the full `nixos-rebuild` or `home-manager` commands manually and provides a cleaner workflow when iterating on your setup.

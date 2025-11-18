@@ -15,20 +15,20 @@
     # get these into the module system
     specialArgs = {inherit inputs self;};
   in {
-    aesthetic = nixosSystem {
+    helios = nixosSystem {
       inherit specialArgs;
       modules =
         desktop
         ++ laptop
         ++ [
-          ./aesthetic
+          ./helios
           "${mod}/programs/gamemode.nix"
           "${mod}/services/gnome-services.nix"
           "${mod}/core/limine.nix"
           {
             home-manager = {
-              users.linuxmobile.imports =
-                homeImports."linuxmobile@aesthetic";
+              users.emmetdelaney.imports =
+                homeImports."emmetdelaney@helios";
               extraSpecialArgs = specialArgs;
             };
           }

@@ -7,11 +7,11 @@
   programs.git = {
     enable = true;
     lfs.enable = true;
-    userName = "Braian A. Diez";
-    userEmail = "bdiez19@gmail.com";
+    userName = "Emmet Delaney";
+    userEmail = "emmedel@gmail.com";
     signing = {
-      key = "481EFFCF2C7B8C7B";
-      signByDefault = true;
+      key = null;
+      signByDefault = false;
     };
 
     delta = {
